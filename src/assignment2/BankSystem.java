@@ -61,7 +61,6 @@ public class BankSystem {
 
     //Request account
     public void requestAccount(){
-        sc.nextLine();
         System.out.println("Enter username: ");
         String name = sc.nextLine();
         requestManager.request(name);
