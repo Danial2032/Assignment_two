@@ -14,4 +14,9 @@ public class BankAccount {
     public void display(){
         System.out.println(username + " - Balance: "+ balance);
     }
+
+    @Override
+    public String toString(){
+        return "BankAccount [ID:" + accountNumber + ",Name: " + username + ",Balance: " + balance + "]";
+    }
 }

@@ -1,6 +1,6 @@
 package assignment2;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Main{
     public static void main(String[] args) {
@@ -8,13 +8,17 @@ public class Main{
         Scanner sc = new Scanner(System.in);
 
 //Array Example (Task 6)
-        BankAccount[] arr = {new BankAccount(1, "Ali", 150000),
-                new BankAccount(2, "Sara", 220000),
-                new BankAccount(3, "John", 100000)};
-        System.out.println("Array Accounts: ");
-        for(BankAccount acc : arr){
-        acc.display();
+        BankAccount[] storedAccounts = new BankAccount[3];
+
+        storedAccounts[0] = new BankAccount(1,"Ali",120000);
+        storedAccounts[1] = new BankAccount(2,"Arman",250000);
+        storedAccounts[2] = new BankAccount(3,"Danial",180000);
+
+        System.out.println("Stored Accounts: ");
+        for(BankAccount acc : storedAccounts){
+            System.out.println(acc);
         }
+        system.accountManager.accounts.addAll(Arrays.asList(storedAccounts));
 
         while(true){
             System.out.println("\n=== MAIN MENU ===");
@@ -39,11 +43,11 @@ public class Main{
                     }
                     else if (b == 4) {
                         System.out.println("Enter username that you want to find: ");
-                        String usernam = sc.nextLine();
+                        String usernam = sc.next();
                         system.accountManager.OutputAccountByName(usernam);
                     }
                     break;
-                case 2: System.out.println("1- Balance\n2-Withdraw\n3-Last Transaction\n4-Undo last transaction");
+                case 2: System.out.println("1- Balance(Display all accounts)\n2-Withdraw\n3-Last Transaction\n4-Undo last transaction");
                     int a = sc.nextInt();
                     if (a == 1) {
                         system.accountManager.displayAccounts();
@@ -72,7 +76,7 @@ public class Main{
                     }
                     else if (c == 4) {
                         System.out.println("Enter name of the bill: ");
-                        String bil = sc.nextLine();
+                        String bil = sc.next();
                         system.billManager.addBill(bil);
                     }
                     else if (c == 5) {
