@@ -38,7 +38,7 @@ public class Main{
                         system.withdraw();
                     }
                     break;
-                case 2: System.out.println("1- Balance\n2-Withdraw\n3-Last Transaction");
+                case 2: System.out.println("1- Balance\n2-Withdraw\n3-Last Transaction\n4-Undo last transaction");
                     int a = sc.nextInt();
                     if (a == 1) {
                         system.accountManager.displayAccounts();
@@ -48,6 +48,9 @@ public class Main{
                     }
                     else if (a == 3) {
                         system.transactionManager.showLast();
+                    }
+                    else if (a == 4) {
+                        system.transactionManager.undo();
                     }
                     break;
                 case 3: System.out.println("1- Process Accounts\n2-Show Requests\n3-Bills");

@@ -18,6 +18,7 @@ public class BillQueueManager{
         }
     }
         public void display(){
-            System.out.println("Bill queue: " + bills);
+
+        System.out.println("Bill queue: " + bills);
         }
 }
