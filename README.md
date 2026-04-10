@@ -8,7 +8,7 @@ Part1: Logical Data Structures
 
 Task 1. Bank Account Storage Using 
 
-![image](https://github.com/Danial2032/assignment1/tree/master/image2.png)
+![image](image1.png)
 
 Task 2. Deposit and Withdraw operations
 
