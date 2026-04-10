@@ -16,9 +16,9 @@ Task 1. Bank Account Storage Using
 
 Task 2. Deposit and Withdraw operations
 
-![image](image4.png)
+![image](image 4.png)
 
-![image](image5.png)
+![image](image 5.png)
 
 Task 3. Transaction History (Stack - LIFO)
 
