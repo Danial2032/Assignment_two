@@ -24,6 +24,7 @@ public class BankSystem {
 
             acc.balance += amount;
             transactionManager.add("Deposit " + amount + " to " + name);
+            System.out.println("Deposit " + amount + " to " + name);
 
             System.out.println("New balance: " + acc.balance);
         }
@@ -47,6 +48,7 @@ public class BankSystem {
                 acc.balance -= amount;
 
                 transactionManager.add("Withdraw " + amount + " from " + name);
+                System.out.println("Withdraw " + amount + " from " + name);
 
                 System.out.println("New balance: " + acc.balance);
             }

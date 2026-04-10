@@ -17,6 +17,15 @@ public class AccountManager{
             acc.display();
         }
     }
+    public void OutputAccountByName(String username){
+        for(BankAccount acc: accounts){
+            if(acc.username.equalsIgnoreCase(username)){
+                acc.display();
+                return;
+            }
+        }
+        System.out.println("Account with such name is not found");
+    }
     public BankAccount searchAccount(String username){
         for(BankAccount acc: accounts){
             if(acc.username.equalsIgnoreCase(username)){

@@ -26,7 +26,7 @@ public class Main{
             int choice = sc.nextInt();
 
             switch(choice){
-                case 1: System.out.println("1- Request Account\n2-Deposit\n3-Withdraw");
+                case 1: System.out.println("1- Request Account\n2-Deposit\n3-Withdraw\n4-Search account by username");
                 int b = sc.nextInt();
                     if (b == 1) {
                         system.requestAccount();
@@ -36,6 +36,11 @@ public class Main{
                     }
                     else if (b == 3) {
                         system.withdraw();
+                    }
+                    else if (b == 4) {
+                        System.out.println("Enter username that you want to find: ");
+                        String usernam = sc.nextLine();
+                        system.accountManager.OutputAccountByName(usernam);
                     }
                     break;
                 case 2: System.out.println("1- Balance\n2-Withdraw\n3-Last Transaction\n4-Undo last transaction");
@@ -53,7 +58,7 @@ public class Main{
                         system.transactionManager.undo();
                     }
                     break;
-                case 3: System.out.println("1- Process Accounts\n2-Show Requests\n3-Bills\n4-Add Bill");
+                case 3: System.out.println("1- Process Accounts\n2-Show Requests\n3-Process Bills\n4-Add Bill\n5-Display Bills");
                     int c = sc.nextInt();
                     if (c == 1) {
                         system.processRequest();
@@ -66,9 +71,12 @@ public class Main{
                         system.billManager.proccessBill();
                     }
                     else if (c == 4) {
-                        System.out.println("Enter name of the bill");
+                        System.out.println("Enter name of the bill: ");
                         String bil = sc.nextLine();
                         system.billManager.addBill(bil);
+                    }
+                    else if (c == 5) {
+                        system.billManager.display();
                     }
                     break;
                 case 4: System.exit(0);
