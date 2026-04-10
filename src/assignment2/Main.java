@@ -53,7 +53,7 @@ public class Main{
                         system.transactionManager.undo();
                     }
                     break;
-                case 3: System.out.println("1- Process Accounts\n2-Show Requests\n3-Bills");
+                case 3: System.out.println("1- Process Accounts\n2-Show Requests\n3-Bills\n4-Add Bill");
                     int c = sc.nextInt();
                     if (c == 1) {
                         system.processRequest();
@@ -64,6 +64,11 @@ public class Main{
                     else if (c == 3) {
                         system.billManager.display();
                         system.billManager.proccessBill();
+                    }
+                    else if (c == 4) {
+                        System.out.println("Enter name of the bill");
+                        String bil = sc.nextLine();
+                        system.billManager.addBill(bil);
                     }
                     break;
                 case 4: System.exit(0);
